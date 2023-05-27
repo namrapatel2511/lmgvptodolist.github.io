@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .container {
+    position: relative;
+    width: auto;
+    min-height: 100vh;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: rgba(224, 216, 216, 0.8); 
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    position: relative;
+    color: cyan;
+    text-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    border: 3px solid cyan; 
+    animation: neon-border 2s infinite alternate;
+  }
+  
+  .todo-app:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid cyan;
+    border-radius: 15px;
+    z-index: -1;
+    animation: neon-border 2s infinite alternate;
+  }
+  
+  .todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+  }
+  
+  .todo-app h2 img {
+    width: 40px;
+    margin-left: 10px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ededed;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-bottom: 2px;
+  }
+  
+  input {
+    flex: 1;
+    font-size: medium;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    
+    
+    
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #000000;
+    color: rgb(255, 0, 64);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: cyan;
+    text-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+   
+    animation: rgbEffect 2s infinite;
+  }
+  
+  ul li {
+    list-style: none;
+    font-size: medium;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(images/pic2.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+  
+  ul li.checked {
+    color: #ee01c6;
+    text-decoration: line-through;
+    text-shadow: 0 0 5px #ee01c6, 0 0 20px #ee01c6, 0 0 30px #ee01c6, 0 0 40px #ee01c6;
+  }
+  
+  ul li.checked::before {
+    background-image: url(images/pic3.png);
+    filter: invert(100%);
+  }
+  
+  ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+  ul li span:hover {
+    background: #818999;
+  }
+  
+  @keyframes neon-glow {
+    0% {
+      text-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    }
+    100% {
+      text-shadow: 0 0 5px lime, 0 0 20px lime, 0 0 30px lime, 0 0 40px lime;
+    }
+  }
+  
+  .todo-app input[type="text"]::placeholder {
+    color: white;
+    font-weight: bold;
+  }
+  .bookmark {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #000000;
+    color: cyan;
+    font-size: 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 30px cyan, 0 0 40px cyan;
+    animation: rgbEffect 2s infinite;
+  }
+  
